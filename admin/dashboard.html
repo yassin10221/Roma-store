@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roma Store Admin Dashboard</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+<!-- ===========================
+SIDEBAR
+=========================== -->
+
+<aside class="sidebar">
+
+<div class="logo">
+
+<h2>Roma Store</h2>
+
+<p>Admin Panel</p>
+
+</div>
+
+<ul>
+
+<li class="active">
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</a>
+
+</li>
+
+<li>
+
+<a href="products.html">
+
+<i class="fa-solid fa-box"></i>
+
+Products
+
+</a>
+
+</li>
+
+<li>
+
+<a href="add-product.html">
+
+<i class="fa-solid fa-plus"></i>
+
+Add Product
+
+</a>
+
+</li>
+
+<li>
+
+<a href="orders.html">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+Orders
+
+</a>
+
+</li>
+
+<li>
+
+<a href="analytics.html">
+
+<i class="fa-solid fa-chart-column"></i>
+
+Analytics
+
+</a>
+
+</li>
+
+<li>
+
+<a href="settings.html">
+
+<i class="fa-solid fa-gear"></i>
+
+Settings
+
+</a>
+
+</li>
+
+</ul>
+
+</aside>
+
+<!-- ===========================
+CONTENT
+=========================== -->
+
+<main class="content">
+
+<header class="topbar">
+
+<div>
+
+<h1>Dashboard</h1>
+
+<p>Welcome Back Admin 👋</p>
+
+</div>
+
+<div class="top-icons">
+
+<button>
+
+<i class="fa-solid fa-bell"></i>
+
+</button>
+
+<button>
+
+<i class="fa-solid fa-user"></i>
+
+</button>
+
+</div>
+
+</header>
+
+<!-- ===========================
+CARDS
+=========================== -->
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fa-solid fa-box"></i>
+
+<h2 id="productsCount">0</h2>
+
+<p>Products</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-cart-shopping"></i>
+
+<h2 id="ordersCount">0</h2>
+
+<p>Orders</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-money-bill-wave"></i>
+
+<h2 id="revenue">0 EGP</h2>
+
+<p>Revenue</p>
+
+</div>
+
+<div class="card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2 id="customersCount">0</h2>
+
+<p>Customers</p>
+
+</div>
+
+</section>
+<!-- ===========================
+PRODUCTS TABLE
+=========================== -->
+
+<section class="table-section">
+
+    <div class="table-header">
+
+        <h2>Latest Products</h2>
+
+        <a href="add-product.html" class="add-btn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add Product
+
+        </a>
+
+    </div>
+
+    <table class="products-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Image</th>
+
+                <th>Name</th>
+
+                <th>Category</th>
+
+                <th>Price</th>
+
+                <th>Stock</th>
+
+                <th>Actions</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="productsTable">
+
+            <tr>
+
+                <td colspan="6">
+
+                    Loading...
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- ===========================
+LOW STOCK
+=========================== -->
+
+<section class="table-section">
+
+    <div class="table-header">
+
+        <h2>Low Stock</h2>
+
+    </div>
+
+    <table class="products-table">
+
+        <thead>
+
+            <tr>
+
+                <th>Product</th>
+
+                <th>Stock</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="lowStockTable">
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<!-- ===========================
+RECENT ORDERS
+=========================== -->
+
+<section class="table-section">
+
+    <div class="table-header">
+
+        <h2>Recent Orders</h2>
+
+    </div>
+
+    <table class="products-table">
+
+        <thead>
+
+            <tr>
+
+                <th>#</th>
+
+                <th>Customer</th>
+
+                <th>Total</th>
+
+                <th>Status</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody id="ordersTable">
+
+            <tr>
+
+                <td colspan="4">
+
+                    No Orders Yet
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Customer Details</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/customers.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+<aside class="sidebar">
+
+<h2>ROMA ADMIN</h2>
+
+<a href="dashboard.html">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</a>
+
+<a href="products.html">
+
+<i class="fa-solid fa-shirt"></i>
+
+Products
+
+</a>
+
+<a href="orders.html">
+
+<i class="fa-solid fa-box"></i>
+
+Orders
+
+</a>
+
+<a href="customers.html" class="active">
+
+<i class="fa-solid fa-users"></i>
+
+Customers
+
+</a>
+
+</aside>
+
+<main class="content">
+
+<h1>
+
+Customer Details
+
+</h1>
+
+<div class="table-card">
+
+<div style="padding:25px">
+
+<h2 id="customerName">
+
+Loading...
+
+</h2>
+
+<p>
+
+<strong>Email:</strong>
+
+<span id="customerEmail"></span>
+
+</p>
+
+<p>
+
+<strong>Phone:</strong>
+
+<span id="customerPhone"></span>
+
+</p>
+
+<p>
+
+<strong>Address:</strong>
+
+<span id="customerAddress"></span>
+
+</p>
+
+<p>
+
+<strong>Total Orders:</strong>
+
+<span id="customerOrders"></span>
+
+</p>
+
+<p>
+
+<strong>Total Spent:</strong>
+
+<span id="customerSpent"></span>
+
+</p>
+
+</div>
+
+</div>
+
+<br>
+
+<div class="table-card">
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>#</th>
+
+<th>Date</th>
+
+<th>Status</th>
+
+<th>Shipping</th>
+
+<th>Total</th>
+
+</tr>
+
+</thead>
+
+<tbody id="ordersTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+</main>
+
+</div>
+
+<script src="js/view-customer.js"></script>
+
+</body>
+
+</html>

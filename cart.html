@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart | Roma Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="index.html" class="logo">
+        <span>Roma</span> Store
+    </a>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html" class="active">Cart</a>
+    </nav>
+
+</header>
+
+<section class="page-title">
+    <h1>Shopping Cart</h1>
+</section>
+
+<section class="cart-page">
+
+    <div id="cart-items"></div>
+
+    <div class="cart-summary">
+
+        <h3>Order Summary</h3>
+
+        <p>
+            Total:
+            <strong id="cart-total">0 EGP</strong>
+        </p>
+
+        <button id="checkoutBtn" class="add-cart">
+            Proceed To Checkout
+        </button>
+
+    </div>
+
+</section>
+
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+
+</body>
+
+</html>

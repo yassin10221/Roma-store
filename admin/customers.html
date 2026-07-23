@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Customers | Roma Store Admin</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/customers.css">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="../js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <aside class="sidebar">
+
+        <h2>ROMA ADMIN</h2>
+
+        <a href="dashboard.html">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </a>
+
+        <a href="products.html">
+            <i class="fa-solid fa-shirt"></i>
+            Products
+        </a>
+
+        <a href="orders.html">
+            <i class="fa-solid fa-box"></i>
+            Orders
+        </a>
+
+        <a href="customers.html" class="active">
+            <i class="fa-solid fa-users"></i>
+            Customers
+        </a>
+
+    </aside>
+
+    <main class="content">
+
+        <div class="page-header">
+
+            <h1>
+
+                Customers
+
+            </h1>
+
+            <input
+                type="text"
+                id="searchCustomer"
+                placeholder="Search customer...">
+
+        </div>
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <h3 id="customersCount">
+
+                    0
+
+                </h3>
+
+                <p>
+
+                    Customers
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="ordersCount">
+
+                    0
+
+                </h3>
+
+                <p>
+
+                    Orders
+
+                </p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <h3 id="revenue">
+
+                    0 EGP
+
+                </h3>
+
+                <p>
+
+                    Revenue
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="table-card">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Name</th>
+
+                        <th>Email</th>
+
+                        <th>Phone</th>
+
+                        <th>Orders</th>
+
+                        <th>Total Spent</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody id="customersTable">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="js/customers.js"></script>
+
+</body>
+
+</html>

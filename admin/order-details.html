@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Order Details</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Order Details</h1>
+
+<div id="customerInfo"></div>
+
+<h2>Products</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Product ID</th>
+<th>Price</th>
+<th>Qty</th>
+<th>Total</th>
+
+</tr>
+
+</thead>
+
+<tbody id="itemsTable">
+
+<tr>
+
+<td colspan="4">Loading...</td>
+
+</tr>
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="order-details.js"></script>
+
+</body>
+</html>

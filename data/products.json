@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Oversized T-Shirt",
+    "category": "Men",
+    "brand": "Roma",
+    "price": 899,
+    "oldPrice": 1099,
+    "currency": "EGP",
+    "discount": 18,
+    "rating": 4.8,
+    "reviews": 124,
+    "stock": 25,
+    "description": "Premium cotton oversized t-shirt with a modern fit. Soft, comfortable and perfect for everyday wear.",
+    "sizes": ["S", "M", "L", "XL"],
+    "colors": ["Black", "White", "Beige"],
+    "images": [
+      "assets/products/men/tshirt1-1.jpg",
+      "assets/products/men/tshirt1-2.jpg",
+      "assets/products/men/tshirt1-3.jpg",
+      "assets/products/men/tshirt1-4.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Classic Hoodie",
+    "category": "Men",
+    "brand": "Roma",
+    "price": 1499,
+    "oldPrice": 1799,
+    "currency": "EGP",
+    "discount": 17,
+    "rating": 4.9,
+    "reviews": 88,
+    "stock": 18,
+    "description": "Warm premium hoodie made from high quality cotton blend.",
+    "sizes": ["M", "L", "XL"],
+    "colors": ["Black", "Gray"],
+    "images": [
+      "assets/products/men/hoodie1-1.jpg",
+      "assets/products/men/hoodie1-2.jpg",
+      "assets/products/men/hoodie1-3.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Elegant Women's Dress",
+    "category": "Women",
+    "brand": "Roma",
+    "price": 1999,
+    "oldPrice": 2399,
+    "currency": "EGP",
+    "discount": 16,
+    "rating": 4.9,
+    "reviews": 67,
+    "stock": 12,
+    "description": "Elegant women's dress suitable for special occasions.",
+    "sizes": ["S", "M", "L"],
+    "colors": ["Black", "Red"],
+    "images": [
+      "assets/products/women/dress1-1.jpg",
+      "assets/products/women/dress1-2.jpg",
+      "assets/products/women/dress1-3.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Kids Summer Set",
+    "category": "Kids",
+    "brand": "Roma",
+    "price": 699,
+    "oldPrice": 899,
+    "currency": "EGP",
+    "discount": 22,
+    "rating": 4.7,
+    "reviews": 41,
+    "stock": 30,
+    "description": "Comfortable summer clothing set for kids.",
+    "sizes": ["4Y", "6Y", "8Y"],
+    "colors": ["Blue", "White"],
+    "images": [
+      "assets/products/kids/set1-1.jpg",
+      "assets/products/kids/set1-2.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Premium Sneakers",
+    "category": "Shoes",
+    "brand": "Roma",
+    "price": 2899,
+    "oldPrice": 3299,
+    "currency": "EGP",
+    "discount": 12,
+    "rating": 5.0,
+    "reviews": 96,
+    "stock": 20,
+    "description": "Luxury sneakers with lightweight sole and premium comfort.",
+    "sizes": ["40", "41", "42", "43", "44"],
+    "colors": ["Black", "White"],
+    "images": [
+      "assets/products/shoes/shoes1-1.jpg",
+      "assets/products/shoes/shoes1-2.jpg",
+      "assets/products/shoes/shoes1-3.jpg"
+    ]
+  }
+]

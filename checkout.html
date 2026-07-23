@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout | Roma Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/checkout.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="index.html" class="logo">
+
+            ROMA STORE
+
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="cart.html">Cart</a>
+
+        </nav>
+
+    </div>
+
+</header>
+
+<main>
+
+<div class="container checkout-container">
+
+    <h1>
+
+        Checkout
+
+    </h1>
+
+    <!-- Customer Information -->
+
+    <div class="checkout-card">
+
+        <h2>
+
+            Customer Information
+
+        </h2>
+
+        <input
+            id="name"
+            type="text"
+            placeholder="Full Name">
+
+        <input
+            id="email"
+            type="email"
+            placeholder="Email">
+
+        <input
+            id="phone"
+            type="text"
+            placeholder="Phone Number">
+
+        <textarea
+            id="address"
+            rows="4"
+            placeholder="Full Address"></textarea>
+
+    </div>
+
+    <!-- Shipping -->
+
+    <div class="checkout-card">
+
+        <h2>
+
+            Delivery Method
+
+        </h2>
+
+        <label class="shipping-option">
+
+            <input
+                type="radio"
+                name="shipping"
+                value="20"
+                checked>
+
+            <div>
+
+                <strong>
+
+                    Home Delivery
+
+                </strong>
+
+                <p>
+
+                    Delivery in 2 - 4 Days
+
+                </p>
+
+            </div>
+
+            <strong>
+
+                20 EGP
+
+            </strong>
+
+        </label>
+
+        <label class="shipping-option">
+
+            <input
+                type="radio"
+                name="shipping"
+                value="0">
+
+            <div>
+
+                <strong>
+
+                    Store Pickup
+
+                </strong>
+
+                <p>
+
+                    Pick up from Roma Store
+
+                </p>
+
+            </div>
+
+            <strong>
+
+                FREE
+
+            </strong>
+
+        </label>
+
+    </div>
+
+    <!-- Order Summary -->
+
+    <div class="checkout-card">
+
+        <h2>
+
+            Order Summary
+
+        </h2>
+
+        <div class="summary-row">
+
+            <span>
+
+                Subtotal
+
+            </span>
+
+            <span id="subtotalPrice">
+
+                0 EGP
+
+            </span>
+
+        </div>
+
+        <div class="summary-row">
+
+            <span>
+
+                Shipping
+
+            </span>
+
+            <span id="shippingPrice">
+
+                20 EGP
+
+            </span>
+
+        </div>
+
+        <!-- ==========================
+PAYMENT METHOD
+========================== -->
+
+<div class="checkout-card">
+
+    <h2>
+
+        Payment Method
+
+    </h2>
+
+    <label class="shipping-option">
+
+        <input
+            type="radio"
+            name="payment"
+            value="Cash On Delivery"
+            checked>
+
+        <span>
+
+            Cash On Delivery
+
+            <br>
+
+            <small>
+
+                Pay when you receive your order
+
+            </small>
+
+        </span>
+
+    </label>
+
+    <label class="shipping-option">
+
+        <input
+            type="radio"
+            name="payment"
+            value="Instapay">
+
+        <span>
+
+            Instapay
+
+            <br>
+
+            <small>
+
+                Instant Bank Transfer
+
+            </small>
+
+        </span>
+
+    </label>
+
+    <label class="shipping-option">
+
+        <input
+            type="radio"
+            name="payment"
+            value="Vodafone Cash">
+
+        <span>
+
+            Vodafone Cash
+
+            <br>
+
+            <small>
+
+                Mobile Wallet Payment
+
+            </small>
+
+        </span>
+
+    </label>
+
+</div>
+
+<!-- PAYMENT INFO -->
+
+<div
+    class="checkout-card"
+    id="paymentInfo"
+    style="display:none;">
+
+    <h2>
+
+        Payment Information
+
+    </h2>
+
+    <p id="paymentText"></p>
+
+</div>
+        <hr>
+
+        <div class="summary-row total">
+
+            <strong>
+
+                Total
+
+            </strong>
+
+            <strong id="totalPrice">
+
+                0 EGP
+
+            </strong>
+
+        </div>
+
+    </div>
+
+    <button
+        id="placeOrderBtn"
+        class="checkout-btn">
+
+        Place Order
+
+    </button>
+
+</div>
+
+</main>
+
+<script src="js/checkout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roma Admin Login</title>
+
+<link rel="stylesheet" href="../css/style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#111;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+
+}
+
+.login-box{
+
+width:420px;
+background:#fff;
+padding:40px;
+border-radius:20px;
+
+}
+
+h1{
+
+margin-bottom:30px;
+text-align:center;
+
+}
+
+input{
+
+width:100%;
+padding:15px;
+margin:10px 0;
+border:1px solid #ddd;
+border-radius:10px;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+border:none;
+background:#000;
+color:#fff;
+cursor:pointer;
+border-radius:10px;
+font-size:16px;
+
+}
+
+#error{
+
+margin-top:20px;
+color:red;
+text-align:center;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="login-box">
+
+<h1>Roma Admin</h1>
+
+<input
+type="email"
+id="email"
+placeholder="Email">
+
+<input
+type="password"
+id="password"
+placeholder="Password">
+
+<button onclick="login()">
+
+Login
+
+</button>
+
+<p id="error"></p>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+<script>
+
+async function login(){
+
+const email=document.getElementById("email").value;
+
+const password=document.getElementById("password").value;
+
+const {error}=await window.supabaseClient.auth.signInWithPassword({
+
+email,
+password
+
+});
+
+if(error){
+
+document.getElementById("error").innerHTML=error.message;
+
+return;
+
+}
+
+location.href="dashboard.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

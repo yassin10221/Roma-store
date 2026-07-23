@@ -1,0 +1,249 @@
+/* ===========================
+CHECKOUT
+=========================== */
+
+.checkout-container{
+
+    max-width:800px;
+
+    margin:50px auto;
+
+}
+
+.checkout-container h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    font-size:36px;
+
+}
+
+.checkout-card{
+
+    background:#fff;
+
+    border:1px solid #eee;
+
+    border-radius:12px;
+
+    padding:25px;
+
+    margin-bottom:25px;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.05);
+
+}
+
+.checkout-card h2{
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+}
+
+.checkout-card input,
+
+.checkout-card textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid #ddd;
+
+    border-radius:8px;
+
+    margin-bottom:15px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+.checkout-card input:focus,
+
+.checkout-card textarea:focus{
+
+    border-color:#000;
+
+}
+
+.checkout-card textarea{
+
+    resize:none;
+
+}
+
+/* ===========================
+SHIPPING
+=========================== */
+
+.shipping-option{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    border:1px solid #ddd;
+
+    padding:18px;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.shipping-option:hover{
+
+    border-color:#000;
+
+    background:#fafafa;
+
+}
+
+.shipping-option input{
+
+    width:auto;
+
+    margin:0;
+
+}
+
+.shipping-option span{
+
+    flex:1;
+
+    font-size:16px;
+
+}
+
+.shipping-option small{
+
+    color:#777;
+
+}
+
+/* ===========================
+SUMMARY
+=========================== */
+
+.summary-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin:15px 0;
+
+    font-size:18px;
+
+}
+
+.summary-row.total{
+
+    font-size:24px;
+
+    font-weight:bold;
+
+}
+
+.summary-row.total strong:last-child{
+
+    color:#000;
+
+}
+
+.checkout-card hr{
+
+    border:none;
+
+    border-top:1px solid #eee;
+
+    margin:20px 0;
+
+}
+
+/* ===========================
+BUTTON
+=========================== */
+
+.checkout-btn{
+
+    width:100%;
+
+    height:60px;
+
+    border:none;
+
+    background:#000;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.checkout-btn:hover{
+
+    background:#222;
+
+    transform:translateY(-2px);
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+    .checkout-container{
+
+        width:95%;
+
+    }
+
+    .shipping-option{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .summary-row{
+
+        font-size:16px;
+
+    }
+
+    .summary-row.total{
+
+        font-size:22px;
+
+    }
+
+}

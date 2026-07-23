@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | Roma Store</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/settings.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="../js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<div class="admin-container">
+
+    <h1>
+
+        Store Settings
+
+    </h1>
+
+    <!-- ===================== -->
+    <!-- STORE INFO -->
+    <!-- ===================== -->
+
+    <div class="settings-card">
+
+        <h2>
+
+            Store Information
+
+        </h2>
+
+        <div class="form-grid">
+
+            <div>
+
+                <label>
+
+                    Store Name
+
+                </label>
+
+                <input
+                    id="storeName"
+                    type="text">
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    Store Email
+
+                </label>
+
+                <input
+                    id="storeEmail"
+                    type="email">
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    Phone
+
+                </label>
+
+                <input
+                    id="storePhone"
+                    type="text">
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    Currency
+
+                </label>
+
+                <select id="currency">
+
+                    <option value="EGP">
+
+                        EGP
+
+                    </option>
+
+                    <option value="USD">
+
+                        USD
+
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <label>
+
+            Address
+
+        </label>
+
+        <textarea
+            id="storeAddress"
+            rows="3"></textarea>
+
+    </div>
+
+    <!-- ===================== -->
+    <!-- SHIPPING -->
+    <!-- ===================== -->
+
+    <div class="settings-card">
+
+        <h2>
+
+            Shipping
+
+        </h2>
+
+        <div class="form-grid">
+
+            <div>
+
+                <label>
+
+                    Shipping Price
+
+                </label>
+
+                <input
+                    id="shippingPrice"
+                    type="number">
+
+            </div>
+
+            <div>
+
+                <label>
+
+                    Free Shipping Above
+
+                </label>
+
+                <input
+                    id="freeShipping"
+                    type="number">
+
+            </div>
+
+        </div>
+
+        <label>
+
+            <input
+                id="pickupEnabled"
+                type="checkbox">
+
+            Enable Store Pickup
+
+        </label>
+
+    </div>
+
+    <!-- ===================== -->
+    <!-- PAYMENT -->
+    <!-- ===================== -->
+
+    <div class="settings-card">
+
+        <h2>
+
+            Payment Methods
+
+        </h2>
+
+        <label>
+
+            <input
+                id="cod"
+                type="checkbox">
+
+            Cash On Delivery
+
+        </label>
+
+        <label>
+
+            <input
+                id="instapay"
+                type="checkbox">
+
+            Instapay
+
+        </label>
+
+        <label>
+
+            <input
+                id="vodafone"
+                type="checkbox">
+
+            Vodafone Cash
+
+        </label>
+
+    </div>
+
+    <button
+        id="saveSettings"
+        class="save-btn">
+
+        <i class="fa-solid fa-floppy-disk"></i>
+
+        Save Settings
+
+    </button>
+
+</div>
+
+<script src="js/settings.js"></script>
+
+</body>
+
+</html>

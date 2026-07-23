@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Order Details | Roma Store</title>
+
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="css/admin.css">
+<link rel="stylesheet" href="css/view-order.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script src="../js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<div class="admin-page">
+
+<div class="container">
+
+<!-- HEADER -->
+
+<div class="page-header">
+
+<a
+href="orders.html"
+class="back-btn">
+
+<i class="fa fa-arrow-left"></i>
+
+Back
+
+</a>
+
+<h1>
+
+Order Details
+
+</h1>
+
+<button
+id="printInvoice"
+class="print-btn">
+
+<i class="fa fa-print"></i>
+
+Print Invoice
+
+</button>
+
+</div>
+
+<!-- SUMMARY -->
+
+<div class="summary-grid">
+
+<div class="summary-card">
+
+<h4>Order ID</h4>
+
+<p id="orderId">#---</p>
+
+</div>
+
+<div class="summary-card">
+
+<h4>Date</h4>
+
+<p id="orderDate">--</p>
+
+</div>
+
+<div class="summary-card">
+
+<h4>Status</h4>
+
+<select id="statusSelect">
+
+<option value="Pending">
+
+Pending
+
+</option>
+
+<option value="Processing">
+
+Processing
+
+</option>
+
+<option value="Shipped">
+
+Shipped
+
+</option>
+
+<option value="Completed">
+
+Completed
+
+</option>
+
+<option value="Cancelled">
+
+Cancelled
+
+</option>
+
+</select>
+
+</div>
+
+<div class="summary-card">
+
+<h4>Total</h4>
+
+<p id="orderTotal">
+
+0 EGP
+
+</p>
+
+</div>
+
+</div>
+
+<!-- CUSTOMER -->
+
+<div class="card">
+
+<h2>
+
+Customer Information
+
+</h2>
+
+<div class="customer-grid">
+
+<div>
+
+<strong>Name</strong>
+
+<p id="customerName"></p>
+
+</div>
+
+<div>
+
+<strong>Email</strong>
+
+<p id="customerEmail"></p>
+
+</div>
+
+<div>
+
+<strong>Phone</strong>
+
+<p id="customerPhone"></p>
+
+</div>
+
+<div>
+
+<strong>Address</strong>
+
+<p id="customerAddress"></p>
+
+</div>
+
+<div>
+
+<strong>Shipping Method</strong>
+
+<p id="shippingMethod"></p>
+
+</div>
+
+<div>
+
+<strong>Payment Method</strong>
+
+<p id="paymentMethod"></p>
+
+</div>
+
+</div>
+
+
+</div>
+
+<!-- PRODUCTS -->
+
+<div class="card">
+
+<h2>
+
+Products
+
+</h2>
+
+<table class="products-table">
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Product</th>
+
+<th>Price</th>
+
+<th>Qty</th>
+
+<th>Total</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productsTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- TOTALS -->
+
+<div class="card totals-card">
+
+<div class="row">
+
+<span>Subtotal</span>
+
+<span id="subtotal">
+
+0 EGP
+
+</span>
+
+</div>
+
+<div class="row">
+
+<span>Shipping</span>
+
+<span id="shipping">
+
+0 EGP
+
+</span>
+
+</div>
+
+<div class="row grand">
+
+<span>
+
+Grand Total
+
+</span>
+
+<span id="grandTotal">
+
+0 EGP
+
+</span>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="js/view-order.js"></script>
+
+</body>
+
+</html>

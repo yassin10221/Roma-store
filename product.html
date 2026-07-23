@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product | Roma Store</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="index.html" class="logo">
+            ROMA STORE
+        </a>
+
+        <nav>
+
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+
+        </nav>
+
+        <div class="header-icons">
+
+            <a href="wishlist.html">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+
+            <a href="cart.html">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main class="product-page">
+
+<div class="container">
+
+<div class="breadcrumb">
+
+<a href="index.html">Home</a>
+
+<i class="fa fa-angle-right"></i>
+
+<a href="shop.html">Shop</a>
+
+<i class="fa fa-angle-right"></i>
+
+<span id="breadcrumbProduct">
+Product
+</span>
+
+</div>
+
+<section class="product-wrapper">
+
+<!-- LEFT -->
+
+<div class="gallery">
+
+<div class="thumbs"
+
+id="thumbnailImages">
+
+</div>
+
+<div class="main-image">
+
+<img
+
+id="mainImage"
+
+src=""
+
+alt="Product">
+
+</div>
+
+</div>
+
+<!-- RIGHT -->
+
+<div class="product-info">
+
+<span
+
+class="brand"
+
+id="productBrand">
+
+</span>
+
+<h1
+
+id="productName">
+
+Loading...
+
+</h1>
+
+<div class="rating">
+
+★★★★★
+
+<span id="reviewCount">
+
+(0 Reviews)
+
+</span>
+
+</div>
+
+<div class="price-box">
+
+<span
+
+class="price"
+
+id="productPrice">
+
+</span>
+
+<span
+
+class="old-price"
+
+id="oldPrice">
+
+</span>
+
+</div>
+
+<p
+
+class="description"
+
+id="productDescription">
+
+</p>
+
+<div class="option-group">
+
+<h3>
+
+Select Size
+
+</h3>
+
+<div
+
+id="sizesContainer"
+
+class="sizes">
+
+</div>
+
+</div>
+
+<div class="option-group">
+
+<h3>
+
+Select Color
+
+</h3>
+
+<div
+
+id="colorsContainer"
+
+class="colors">
+
+</div>
+
+</div>
+
+<div class="quantity-box">
+
+<button
+
+id="minusBtn">
+
+-
+
+</button>
+
+<input
+
+type="number"
+
+id="quantityInput"
+
+value="1"
+
+min="1">
+
+<button
+
+id="plusBtn">
+
++
+
+</button>
+
+</div>
+
+<div class="buttons">
+
+<button
+
+class="add-cart">
+
+<i class="fa fa-cart-shopping"></i>
+
+Add To Cart
+
+</button>
+
+<button
+
+class="wishlist-btn">
+
+<i class="fa-regular fa-heart"></i>
+
+Wishlist
+
+</button>
+
+<button
+
+class="buy-now">
+
+Buy Now
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+PRODUCT TABS
+=========================== -->
+
+<section class="product-tabs">
+
+    <div class="tabs-header">
+
+        <button class="tab-btn active"
+            data-tab="description">
+
+            Description
+
+        </button>
+
+        <button class="tab-btn"
+            data-tab="reviews">
+
+            Reviews
+
+        </button>
+
+        <button class="tab-btn"
+            data-tab="shipping">
+
+            Shipping
+
+        </button>
+
+    </div>
+
+    <div class="tabs-content">
+
+        <div
+            class="tab-panel active"
+            id="description">
+
+            <p id="descriptionTab"></p>
+
+        </div>
+
+        <div
+            class="tab-panel"
+            id="reviews">
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    ★★★★★
+
+                </div>
+
+                <h4>
+
+                    Excellent Quality
+
+                </h4>
+
+                <p>
+
+                    Premium Roma Store product with
+                    excellent fabric and stitching.
+
+                </p>
+
+            </div>
+
+            <div class="review-card">
+
+                <div class="review-top">
+
+                    ★★★★★
+
+                </div>
+
+                <h4>
+
+                    Highly Recommended
+
+                </h4>
+
+                <p>
+
+                    Fits perfectly and the material
+                    feels luxurious.
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div
+            class="tab-panel"
+            id="shipping">
+
+            <ul class="shipping-list">
+
+                <li>
+
+                    ✔ Free Shipping over 1500 EGP
+
+                </li>
+
+                <li>
+
+                    ✔ Delivery 2-5 Business Days
+
+                </li>
+
+                <li>
+
+                    ✔ Easy Returns within 14 Days
+
+                </li>
+
+                <li>
+
+                    ✔ Cash On Delivery Available
+
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ===========================
+RELATED PRODUCTS
+=========================== -->
+
+<section class="related-section">
+
+    <div class="section-title">
+
+        <h2>
+
+            You May Also Like
+
+        </h2>
+
+    </div>
+
+    <div
+        class="related-grid"
+        id="related-products">
+
+    </div>
+
+</section>
+
+</div>
+
+</main>
+
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-logo">
+
+            ROMA STORE
+
+        </div>
+
+        <p>
+
+            © 2026 Roma Store.
+            All Rights Reserved.
+
+        </p>
+
+    </div>
+
+</footer>
+
+<script src="js/product.js"></script>
+
+</body>
+
+</html>

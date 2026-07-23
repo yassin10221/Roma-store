@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | Roma Store</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/analytics.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="../js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<div class="admin-wrapper">
+
+    <div class="page-header">
+
+        <h1>
+
+            Analytics Dashboard
+
+        </h1>
+
+    </div>
+
+    <!-- TOP CARDS -->
+
+    <div class="analytics-cards">
+
+        <div class="analytics-card">
+
+            <i class="fa-solid fa-sack-dollar"></i>
+
+            <h2 id="totalRevenue">
+
+                0 EGP
+
+            </h2>
+
+            <p>
+
+                Revenue
+
+            </p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h2 id="totalOrders">
+
+                0
+
+            </h2>
+
+            <p>
+
+                Orders
+
+            </p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <i class="fa-solid fa-users"></i>
+
+            <h2 id="totalCustomers">
+
+                0
+
+            </h2>
+
+            <p>
+
+                Customers
+
+            </p>
+
+        </div>
+
+        <div class="analytics-card">
+
+            <i class="fa-solid fa-box"></i>
+
+            <h2 id="totalProducts">
+
+                0
+
+            </h2>
+
+            <p>
+
+                Products
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- CHARTS -->
+
+    <div class="charts-grid">
+
+        <div class="chart-card">
+
+            <h3>
+
+                Monthly Sales
+
+            </h3>
+
+            <canvas id="salesChart"></canvas>
+
+        </div>
+
+        <div class="chart-card">
+
+            <h3>
+
+                Products By Category
+
+            </h3>
+
+            <canvas id="categoryChart"></canvas>
+
+        </div>
+
+    </div>
+
+    <!-- TOP PRODUCTS -->
+
+    <div class="table-card">
+
+        <h2>
+
+            Top Selling Products
+
+        </h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Product</th>
+
+                    <th>Sold</th>
+
+                    <th>Revenue</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody id="topProductsTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="js/analytics.js"></script>
+
+</body>
+
+</html>

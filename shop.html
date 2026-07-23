@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shop | Roma Store</title>
+
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/shop.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+
+</head>
+
+<body>
+
+<!-- ===========================
+HEADER
+=========================== -->
+
+<header class="header">
+
+<div class="container">
+
+<a href="index.html" class="logo">
+
+ROMA STORE
+
+</a>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="shop.html" class="active">
+
+Shop
+
+</a>
+
+<a href="about.html">
+
+About
+
+</a>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</nav>
+
+<div class="header-icons">
+
+<a href="wishlist.html">
+
+<i class="fa-regular fa-heart"></i>
+
+</a>
+
+<a href="cart.html">
+
+<i class="fa-solid fa-bag-shopping"></i>
+
+<span id="cartCount">0</span>
+
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- ===========================
+PAGE TITLE
+=========================== -->
+
+<section class="page-banner">
+
+<div class="container">
+
+<h1>
+
+SHOP
+
+</h1>
+
+<p>
+
+Luxury Fashion Collection
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ===========================
+SHOP
+=========================== -->
+
+<section class="shop-page">
+
+<div class="container shop-layout">
+
+<!-- FILTERS -->
+
+<aside class="shop-sidebar">
+
+<h3>
+
+Filters
+
+</h3>
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Products...">
+
+<select id="categoryFilter">
+
+<option value="">
+
+All Categories
+
+</option>
+
+<option value="Men">
+
+Men
+
+</option>
+
+<option value="Women">
+
+Women
+
+</option>
+
+<option value="Kids">
+
+Kids
+
+</option>
+
+<option value="Shoes">
+
+Shoes
+
+</option>
+
+</select>
+
+<select id="brandFilter">
+
+<option value="">
+
+All Brands
+
+</option>
+
+</select>
+
+<select id="sortFilter">
+
+<option value="newest">
+
+Newest
+
+</option>
+
+<option value="low">
+
+Price Low → High
+
+</option>
+
+<option value="high">
+
+Price High → Low
+
+</option>
+
+</select>
+
+<div class="price-filter">
+
+<label>
+
+Maximum Price
+
+</label>
+
+<input
+type="range"
+id="priceRange"
+min="0"
+max="5000"
+value="5000">
+
+<span id="priceValue">
+
+5000 EGP
+
+</span>
+
+</div>
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+id="featuredOnly">
+
+Featured Only
+
+</label>
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+id="inStockOnly">
+
+In Stock Only
+
+</label>
+
+</aside>
+
+<!-- PRODUCTS -->
+
+<div class="shop-content">
+
+<div class="shop-top">
+
+<h2>
+
+Products
+
+</h2>
+
+<p id="productsCount">
+
+0 Products
+
+</p>
+
+</div>
+
+<div
+class="products-grid"
+id="productsContainer">
+
+<!-- Products -->
+
+</div>
+
+<div
+class="pagination"
+id="pagination">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ===========================
+LOADING
+=========================== -->
+
+<div id="loading" class="loading">
+
+    <div class="loader"></div>
+
+    <p>Loading Products...</p>
+
+</div>
+
+<!-- ===========================
+QUICK VIEW
+=========================== -->
+
+<div
+class="quick-view"
+id="quickView">
+
+<div class="quick-content">
+
+<span
+class="close"
+id="closeQuickView">
+
+&times;
+
+</span>
+
+<div
+id="quickViewContent">
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ===========================
+NEWSLETTER
+=========================== -->
+
+<section class="newsletter">
+
+<div class="container">
+
+<h2>
+
+Join Roma Store
+
+</h2>
+
+<p>
+
+Get exclusive offers and new arrivals.
+
+</p>
+
+<form class="newsletter-form">
+
+<input
+
+type="email"
+
+placeholder="Your Email"
+
+required>
+
+<button>
+
+Subscribe
+
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+<!-- ===========================
+FOOTER
+=========================== -->
+
+<footer class="footer">
+
+<div class="container footer-grid">
+
+<div>
+
+<h3>
+
+ROMA STORE
+
+</h3>
+
+<p>
+
+Luxury Fashion Store
+
+Premium Clothing
+
+Fast Delivery
+
+</p>
+
+</div>
+
+<div>
+
+<h4>
+
+Shop
+
+</h4>
+
+<ul>
+
+<li>
+
+<a href="shop.html">
+
+All Products
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Men
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Women
+
+</a>
+
+</li>
+
+<li>
+
+<a href="#">
+
+Kids
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+Support
+
+</h4>
+
+<ul>
+
+<li>
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+</li>
+
+<li>
+
+<a href="faq.html">
+
+FAQ
+
+</a>
+
+</li>
+
+<li>
+
+<a href="about.html">
+
+About
+
+</a>
+
+</li>
+
+</ul>
+
+</div>
+
+<div>
+
+<h4>
+
+Follow Us
+
+</h4>
+
+<div class="socials">
+
+<a href="#">
+
+<i class="fab fa-facebook-f"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-instagram"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-tiktok"></i>
+
+</a>
+
+<a href="#">
+
+<i class="fab fa-x-twitter"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="copyright">
+
+© 2026 Roma Store. All Rights Reserved.
+
+</div>
+
+</footer>
+
+<script src="js/app.js"></script>
+
+<script src="js/shop.js"></script>
+
+</body>
+
+</html>

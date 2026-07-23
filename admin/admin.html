@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Roma Store Admin</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#f5f5f5;
+    font-family:Poppins,sans-serif;
+}
+
+.admin{
+
+    max-width:1200px;
+    margin:auto;
+    padding:40px;
+
+}
+
+.admin h1{
+
+    margin-bottom:30px;
+
+}
+
+.form{
+
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+    background:#fff;
+
+    padding:25px;
+
+    border-radius:15px;
+
+}
+
+.form input,
+.form textarea,
+.form select{
+
+    padding:15px;
+
+    border:1px solid #ddd;
+
+    border-radius:10px;
+
+    width:100%;
+
+}
+
+.form textarea{
+
+    grid-column:1/3;
+
+    height:120px;
+
+}
+
+.form button{
+
+    grid-column:1/3;
+
+    padding:15px;
+
+    border:none;
+
+    background:#111;
+
+    color:#fff;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+}
+
+table{
+
+    width:100%;
+
+    margin-top:40px;
+
+    border-collapse:collapse;
+
+    background:#fff;
+
+}
+
+th,td{
+
+    padding:15px;
+
+    border-bottom:1px solid #eee;
+
+    text-align:center;
+
+}
+
+td img{
+
+    width:80px;
+
+    border-radius:10px;
+
+}
+
+.edit{
+
+    background:#2196f3;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+.delete{
+
+    background:#e53935;
+    color:white;
+    border:none;
+    padding:8px 14px;
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="admin">
+
+<h1>Roma Store Admin</h1>
+
+<div class="form">
+
+<input id="name" placeholder="Product Name">
+
+<input id="category" placeholder="Category">
+
+<input id="price" type="number" placeholder="Price">
+
+<input id="old_price" type="number" placeholder="Old Price">
+
+<input id="image" placeholder="Image URL">
+
+<input id="stock" type="number" placeholder="Stock">
+
+<textarea id="description" placeholder="Description"></textarea>
+
+<button onclick="addProduct()">
+
+Add Product
+
+</button>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Image</th>
+
+<th>Name</th>
+
+<th>Price</th>
+
+<th>Edit</th>
+
+<th>Delete</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productsTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/admin.js"></script>
+
+</body>
+
+</html>
